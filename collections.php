@@ -28,11 +28,9 @@ function show_collection_album($collection_id=""){
         ";
     }
     $main="
-    <div class='container-fluid myflickr'>
+    <div class='myflickr'>
       <div class='page-header'><h2>"._MD_MYFLICK_SMNAME3."</h2></div>
-        <div class='row'>
-          {$photoColData}
-        </div>
+        {$photoColData}
     </div>
     ";
 
@@ -70,11 +68,9 @@ function show_collection_sets($collection_id){
       }
     }
     $main="
-    <div class='container-fluid myflickr'>
+    <div class='myflickr'>
       <div class='page-header'><h2>{$colTitle}</h2></div>
-        <div class='row'>
-          {$photoSetData}
-        </div>
+        {$photoSetData}
     </div>
     ";
 

@@ -74,19 +74,18 @@ function show_all_sets($page){
     }
 
     $pagenation="
-    <div class='row'>
-     <ul class='pagination'>
+     <ul class='pagination pagination-sm'>
        {$back_pr}{$back_mr}{$pagenum}{$next_mr}{$next_pr}
      </ul>
-    </div>";
+    ";
 
     $main="
-    <div class='container-fluid myflickr'>
+    <div class='myflickr'>
       <div class='page-header'><h2>"._MD_MYFLICK_SMNAME2."</h2></div>
-        <div class='row'>
+        <div class='photoset clearfix'>
           {$photoSetData}
         </div>
-      {$pagenation}
+      <div class='text-center'>{$pagenation}</div>
     </div>
     ";
 

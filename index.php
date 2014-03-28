@@ -28,7 +28,7 @@ function show_public_photo($page){
         $photoData .="
         <div class='photo'>
           <a href='".$f->buildPhotoURL($photo, 'large')."' title='{$photo['title']}' class='fancybox-thumb thumbnail' rel='gallery1'>
-          <img data-src='holder.js' alt='{$photo['title']}' src='".$f->buildPhotoURL($photo, "small")."' />
+          <img data-src='holder.js' alt='{$photo['title']}' src='".$f->buildPhotoURL($photo, "thumbnail")."' />
           <span class='title'>{$photo['title']}</span>
           </a>
         </div>";
@@ -74,24 +74,23 @@ function show_public_photo($page){
     }
 
     $pagenation="
-    <div class='row'>
-     <ul class='pagination'>
+     <ul class='pagination pagination-sm'>
        {$back_pr}{$back_mr}{$pagenum}{$next_mr}{$next_pr}
      </ul>
-    </div>";
+    ";
 
     $jquery=get_jquery();
 
     $main="
     $jquery
-    <script type='text/javascript' src='".XOOPS_URL."/modules/tadtools/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js'></script>
-    <link rel='stylesheet' href='".XOOPS_URL."/modules/tadtools/fancyBox/source/jquery.fancybox.css' type='text/css' media='screen' />
-    <script type='text/javascript' src='".XOOPS_URL."/modules/tadtools/fancyBox/source/jquery.fancybox.pack.js'></script>
-    <link rel='stylesheet' href='".XOOPS_URL."/modules/tadtools/fancyBox/source/helpers/jquery.fancybox-buttons.css' type='text/css' media='screen' />
-    <script type='text/javascript' src='".XOOPS_URL."/modules/tadtools/fancyBox/source/helpers/jquery.fancybox-buttons.js'></script>
-    <script type='text/javascript' src='".XOOPS_URL."/modules/tadtools/fancyBox/source/helpers/jquery.fancybox-media.js'></script>
-    <link rel='stylesheet' href='".XOOPS_URL."/modules/tadtools/fancyBox/source/helpers/jquery.fancybox-thumbs.css' type='text/css' media='screen' />
-    <script type='text/javascript' src='".XOOPS_URL."/modules/tadtools/fancyBox/source/helpers/jquery.fancybox-thumbs.js'></script>
+    <script type='text/javascript' src='".XOOPS_URL."/modules/myFlickr/class/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js'></script>
+    <link rel='stylesheet' href='".XOOPS_URL."/modules/myFlickr/class/fancyBox/source/jquery.fancybox.css' type='text/css' media='screen' />
+    <script type='text/javascript' src='".XOOPS_URL."/modules/myFlickr/class/fancyBox/source/jquery.fancybox.pack.js'></script>
+    <link rel='stylesheet' href='".XOOPS_URL."/modules/myFlickr/class/fancyBox/source/helpers/jquery.fancybox-buttons.css' type='text/css' media='screen' />
+    <script type='text/javascript' src='".XOOPS_URL."/modules/myFlickr/class/fancyBox/source/helpers/jquery.fancybox-buttons.js'></script>
+    <script type='text/javascript' src='".XOOPS_URL."/modules/myFlickr/class/fancyBox/source/helpers/jquery.fancybox-media.js'></script>
+    <link rel='stylesheet' href='".XOOPS_URL."/modules/myFlickr/class/fancyBox/source/helpers/jquery.fancybox-thumbs.css' type='text/css' media='screen' />
+    <script type='text/javascript' src='".XOOPS_URL."/modules/myFlickr/class/fancyBox/source/helpers/jquery.fancybox-thumbs.js'></script>
     <script type='text/javascript'>
     $(document).ready(function() {
       $('.fancybox-thumb').fancybox({
@@ -110,14 +109,12 @@ function show_public_photo($page){
       });
     });
     </script>
-    <div class='container-fluid myflickr'>
+    <div class='myflickr'>
       <div class='page-header'><h2>"._MD_MYFLICK_SMNAME1."</h2></div>
-        <div class='row'>
-          <div class='thumbnails'>
-            {$photoData}
-          </div>
+        <div class='thumbnails clearfix'>
+          {$photoData}
         </div>
-      {$pagenation}
+      <div class='text-center'>{$pagenation}</div>
     </div>
     ";
 
