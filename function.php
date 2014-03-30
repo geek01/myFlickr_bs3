@@ -51,4 +51,24 @@ if(!function_exists('get_jquery')){
       return $main;
     }
 }
+
+function get_sets_id(){
+  global $xoopsModuleConfig;
+  require_once "class/phpFlickr/phpFlickr.php";
+
+  $f = new phpFlickr($xoopsModuleConfig['key']);
+  $f->enableCache("fs", XOOPS_ROOT_PATH."/uploads/myflickr_cache");
+
+  $user_id=$xoopsModuleConfig['userid'];
+
+  $sets=$f->photosets_getList($user_id, NULL);
+
+  foreach ($sets['photoset'] as $set)
+  {
+  	$main[]=$set['id'];
+  }
+
+  return $main;
+}
+
 ?>

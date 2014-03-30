@@ -135,6 +135,10 @@ $xoopsTpl->assign( "css" , "<link rel='stylesheet' type='text/css' media='screen
 switch($op){
 
 	default:
+  $sets_id=get_sets_id();
+  if (!in_array($sid, $sets_id)) {
+        redirect_header("index.php",3,_MD_MYFLICK_SIDERROR);
+  }
 	$main=show_photo($sid,$page);
 	break;
 }
