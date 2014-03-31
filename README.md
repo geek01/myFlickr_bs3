@@ -8,6 +8,7 @@ Xoops Modules
 * 此模組使用phpFlickr( Dan Coulter , http://phpflickr.com/ )操作Flickr API
 * 此版本升級使用bootstrap3並且不須搭配安裝TadTools
 * 注意下載後需將模組資料夾名稱由 myFlickr_bs3-master 更改為 myFlickr 後安裝
+* 因為相片集需要使用分頁，原作者沒有納入，所以修改了phpFlickr.php line1326 1328，line367增加Large Square尺寸 
 
 ## 使用
 和一般Xoops模組安裝方式相同，安裝後至模組後台偏好設定：
