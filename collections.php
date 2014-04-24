@@ -16,7 +16,7 @@ function show_collection_album($collection_id=""){
 
   $collections = $f->collections_getTree($collection_id,$user_id);
   if ($f->getErrorCode() != NULL) {
-    return "<div class='alert alert-error'>".$f->getErrorMsg()."</div>";
+    return "<div class='alert alert-danger'>".$f->getErrorMsg()."</div>";
   }
 
   $photoColData = "";
@@ -48,7 +48,7 @@ function show_collection_sets($collection_id){
 
   $collections = $f->collections_getTree($collection_id,$user_id);
   if ($f->getErrorCode() != NULL) {
-    return "<div class='alert alert-error'>".$f->getErrorMsg()."</div>";
+    return "<div class='alert alert-danger'>".$f->getErrorMsg()."</div>";
   }
 
   $photoSetData = "";

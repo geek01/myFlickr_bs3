@@ -18,7 +18,7 @@ function show_photo($photoset_id,$page){
     $photos = $f->photosets_getPhotos($photoset_id, 'original_format', NULL, $per_page, $page);
     $info = $f->photosets_getInfo($photoset_id);
     if ($f->getErrorCode() != NULL) {
-      return "<div class='alert alert-error'>".$f->getErrorMsg()."</div>";
+      return "<div class='alert alert-danger'>".$f->getErrorMsg()."</div>";
     }
     $pages = $photos['photoset']['pages'];
     $total = $photos['photoset']['total'];

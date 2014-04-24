@@ -17,7 +17,7 @@ function show_public_photo($page){
 
     $photos = $f->people_getPublicPhotos($user_id, NULL, 'original_format', $per_page ,$page);
     if ($f->getErrorCode() != NULL) {
-      return "<div class='alert alert-error'>".$f->getErrorMsg()."</div>";
+      return "<div class='alert alert-danger'>".$f->getErrorMsg()."</div>";
     }
     $pages = $photos['photos']['pages'];
     $total = $photos['photos']['total'];

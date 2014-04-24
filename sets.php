@@ -17,7 +17,7 @@ function show_all_sets($page){
 
     $sets=$f->photosets_getList($user_id, NULL, $per_page, $page);
     if ($f->getErrorCode() != NULL) {
-      return "<div class='alert alert-error'>".$f->getErrorMsg()."</div>";
+      return "<div class='alert alert-danger'>".$f->getErrorMsg()."</div>";
     }
     $pages = $sets['pages'];
     $total = $sets['total'];

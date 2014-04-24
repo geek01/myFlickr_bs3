@@ -17,7 +17,7 @@ function show_favorite_photo($page){
 
     $photos = $f->favorites_getPublicList ($user_id, NULL, NULL, NULL, NULL , $per_page, $page);
     if ($f->getErrorCode() != NULL) {
-      return "<div class='alert alert-error'>".$f->getErrorMsg()."</div>";
+      return "<div class='alert alert-danger'>".$f->getErrorMsg()."</div>";
     }
     $pages = $photos['photos']['pages'];
     $total = $photos['photos']['total'];
