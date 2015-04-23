@@ -15,7 +15,6 @@
 }
 .myflickr .sets-title {
 	font-size: 15px;
-	padding: 0 5px;
 	text-align: center;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -26,7 +25,7 @@
 	padding: 5px;
 	text-align: center;
 }
-.myflickr .sets-info span{
+.myflickr .sets-info span {
 	/*margin: 0 10px 0 0;*/
 }
 .myflickr .album-primary {
@@ -39,8 +38,12 @@
 	margin: 0 26px 26px 0;
 	overflow: hidden;
 }
-.myflickr .photo a{
+.myflickr .photo a {
 	background-color: #FFFFFF;
+}
+.myflickr .photo img {
+    height: 75px !important;
+    width: 100px !important;
 }
 .myflickr .photo span.title {
     color: #333333;
