@@ -17,6 +17,9 @@
 	font-size: 15px;
 	padding: 0 5px;
 	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 240px;
 }
 .myflickr .sets-info {
 	color:#666666;
